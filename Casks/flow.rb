@@ -12,7 +12,10 @@ cask "flow" do
   version "0.2.2"
   sha256 "ae286486b4e09e798fe7b00e14121d8dedda58959f5f3f27a698f990361c97c0"
 
-  url "https://github.com/devord/flow/releases/download/v#{version}/Flow_#{version}_universal.dmg"
+  # Binaries are hosted on the PUBLIC tap repo's releases, not devord/flow (private) — a private
+  # repo's release assets 404 for anonymous `curl`, which is what Homebrew uses. The tap's git tree
+  # stays recipe-only; the .dmg rides along as a release asset, attached by the release workflow.
+  url "https://github.com/devord/homebrew-tap/releases/download/v#{version}/Flow_#{version}_universal.dmg"
   name "Flow"
   desc "Agentic coding workspace (desktop shell for flow.devord.com)"
   homepage "https://flow.devord.com"
