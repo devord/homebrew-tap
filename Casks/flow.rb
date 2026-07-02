@@ -1,7 +1,7 @@
 # Homebrew cask for Flow — TEMPLATE.
 #
 # This is the canonical source for the cask. The release workflow (.github/workflows/release.yml,
-# `desktop` job) substitutes 0.9.6 and eec9b4145c3920ce7bb0c8ab19c5a6bf8dd1aeb947a68dcba61667b43736ccd3 and writes the result to Casks/flow.rb in the
+# `desktop` job) substitutes 0.10.0 and bf87b7a6d1bc47953e789e08b508e81f299a3b4df293097262759c1d6c9d9f7c and writes the result to Casks/flow.rb in the
 # devord/homebrew-tap on each release. Do not hand-edit the copy in the tap; edit this template.
 #
 # Install:  brew install --cask devord/tap/flow
@@ -9,8 +9,8 @@
 # UNSIGNED build: Flow is not yet Developer-ID signed or notarized, so the `caveats` below explain the
 # one-time Gatekeeper step. When signing lands, delete the caveats block (and nothing else changes).
 cask "flow" do
-  version "0.9.6"
-  sha256 "eec9b4145c3920ce7bb0c8ab19c5a6bf8dd1aeb947a68dcba61667b43736ccd3"
+  version "0.10.0"
+  sha256 "bf87b7a6d1bc47953e789e08b508e81f299a3b4df293097262759c1d6c9d9f7c"
 
   # Binaries are hosted on the PUBLIC tap repo's releases, not devord/flow (private) — a private
   # repo's release assets 404 for anonymous `curl`, which is what Homebrew uses. The tap's git tree
